@@ -1,0 +1,532 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  color: #333;
+}
+.logo {
+  padding-right:400px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 1000;
+  background: #eeebeb;
+  justify-content: space-between;
+  transition: 1.5s;
+  align-items: center;
+  padding: 10px 20px;
+  overflow-x: auto; /* Added overflow-x to allow horizontal scrolling */
+  margin-left: -20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  padding: 8px 10px;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+  border: 2px solid #6e8efb;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+section {
+  padding: 50px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.5em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-button {
+  background: white;
+  color: #6e8efb;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #e5e3e3;
+}
+/* Key Problems Solved Section */
+.problems-solved {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.problem {
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.problem-image {
+  flex: 1;
+}
+
+.problem-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.problem-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.problem-text h3 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.problem-text p {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.animated-text {
+  opacity: 0;
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+/* Why Choose cb for Inventory Management? Section */
+.why-choose-cb {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.why-choose-cb .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose-cb h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes expand {
+  0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      width: 300%;
+      height: 300%;
+      opacity: 0;
+  }
+}
+
+.metrics {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.metric {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.metric:hover {
+  transform: scale(1.05);
+}
+
+.metric p {
+  font-size: 1.2em;
+}
+
+.metric .icon {
+  font-size: 4em;
+  margin-bottom: 10px;
+  animation: bounceIn 1s ease-in-out;
+}
+/* Reviews Section */
+.reviews {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 80px 0;
+  text-align: center;
+  font-size: 20px;
+}
+.client{
+  font-size: 40px;
+}
+.review {
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.review p {
+  font-size: 1.2em;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
+
+.review:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.review:nth-child(odd) p {
+  color: #333;
+}
+
+.features{
+  font-size: 2em;
+  text-align: center;
+  
+}
+.features .tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  font-size: 25px;
+  background: #6e8efb;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.tab-button:hover {
+  background: #a777e3;
+}
+
+.feature-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.feature-content p {
+  font-size: 1.2em;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cta {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 0;
+  font-size: 2.5em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.cta p {
+  font-size: 1.5em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+footer p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+footer address {
+  font-style: normal;
+  font-size: 0.9em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+  }
+}
+@media screen and (max-width: 900px) and (min-width:250px){
+  img{
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+  }
+  .logo{
+    font-size: 15px;
+      padding-right: 10px; /* Add some padding for spacing */
+      font-weight: bold;
+    padding-left: 10px;
+  }
+  nav {
+    position: static; /* Change to static positioning for smaller devices */
+    flex-direction: column; /* Align items vertically */
+    /* align-items: stretch; Stretch items to full width */
+    padding-left: 10px;
+    margin-left: -20px;
+    position: fixed;
+  }
+
+  nav ul {
+    align-items: stretch;
+  }
+
+  nav ul li {
+    margin: 5px 1px; /* Adjust margins */
+  }
+  nav ul li a{
+    font-size: 6.5px;
+  }
+  nav ul li a:hover {
+    color: #fff;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+  }
+  .hero {
+    padding: 80px 20px; /* Adjusted padding for mobile */
+  }
+
+  .hero h1 {
+    font-size: 2em; /* Adjusted font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1.2em; /* Adjusted font size for mobile */
+  }
+
+  .cta-button {
+    padding: 12px 20px; /* Adjusted padding for mobile */
+    font-size: 16px; /* Adjusted font size for mobile */
+  }
+
+  .problems-solved {
+    padding: 40px 20px; /* Adjusted padding for mobile */
+  }
+
+  .problem {
+    width: 100%; /* Set full width for mobile */
+    flex-direction: column; /* Adjust flex direction for mobile */
+  }
+
+  .problem-text h3 {
+    font-size: 1.8em; /* Adjusted font size for mobile */
+  }
+
+  .problem-text p {
+    font-size: 1em; /* Adjusted font size for mobile */
+  }
+
+  .why-choose-cb h2 {
+    font-size: 2em; /* Adjusted font size for mobile */
+  }
+
+  .metric {
+    width: 80%; /* Adjusted width for mobile */
+  }
+
+  .metric p {
+    font-size: 1em; /* Adjusted font size for mobile */
+  }
+
+  .metric .icon {
+    font-size: 3em; /* Adjusted font size for mobile */
+  }
+
+  .reviews {
+    padding: 40px 20px; /* Adjusted padding for mobile */
+  }
+
+  .client {
+    font-size: 2em; /* Adjusted font size for mobile */
+  }
+
+  .review {
+    padding: 15px; /* Adjusted padding for mobile */
+  }
+
+  .review p {
+    font-size: 1em; /* Adjusted font size for mobile */
+  }
+
+  .features {
+    padding: 40px 20px; /* Adjusted padding for mobile */
+  }
+
+  .tab-button {
+    font-size: 20px; /* Adjusted font size for mobile */
+    padding: 12px 16px; /* Adjusted padding for mobile */
+    margin: 5px; /* Adjusted margin for mobile */
+  }
+
+  .cta {
+    padding: 80px 20px; /* Adjusted padding for mobile */
+  }
+
+  .cta h2 {
+    font-size: 2em; /* Adjusted font size for mobile */
+  }
+
+  .cta p {
+    font-size: 1.2em; /* Adjusted font size for mobile */
+  }
+
+  footer p {
+    font-size: 0.9em; /* Adjusted font size for mobile */
+  }
+
+  footer address {
+    font-size: 0.8em; /* Adjusted font size for mobile */
+  }
+}
